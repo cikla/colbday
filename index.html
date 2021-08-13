@@ -832,6 +832,12 @@ function reveal() {
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
+  ifrm.allow = 'fullscreen';
+  ifrm.allowfullscreen = 'allowfullscreen';
+  ifrm.mozallowfullscreen = 'mozallowfullscreen';
+  ifrm.msallowfullscreen = 'msallowfullscreen';
+  ifrm.oallowfullscreen = 'oallowfullscreen';
+  ifrm.webkitallowfullscreen = 'webkitallowfullscreen';
   document.querySelector('#video').appendChild(ifrm);
 
 
