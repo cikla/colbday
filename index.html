@@ -33,6 +33,12 @@ div#beach {
   background-repeat: no-repeat;
 }
 
+div#foto {
+  position: absolute;
+  right: 543px;
+  bottom: 200px;
+}
+
 div#video {
   position: absolute;
   right: 243px;
@@ -447,6 +453,11 @@ div#sea {
     background-size: 2000px;
   }
 
+  div#foto {
+    right: 590px;
+    bottom: 235px;
+  }
+
   div#video {
     right: 290px;
     bottom: 235px;
@@ -512,6 +523,9 @@ div#sea {
         </div>
       </div>
       
+      <div id="foto">
+      </div>
+      
       <div id="video">
       <!--<iframe width="255" height="155" src="https://www.youtube.com/embed/KDxJlW6cxRk?controls=0&loop=1" frameborder="0" allowfullscreen></iframe>-->
       </div>
@@ -519,17 +533,6 @@ div#sea {
 </body>
 
 <script>
-/*
-Everybody say Happy Birthday! This gift is a compound of various pens plus some other things I added
-- gift 
-https://codepen.io/ElaineXu/pen/EWvGWX
-- neon 
-https://codepen.io/markheggan/pen/LjrVYN
-- fireworks 
-https://codepen.io/chuongdang/pen/yzpDG
-- moon 
-https://codepen.io/agelber/pen/sjIKp
-*/
 window.requestAnimFrame = function () {
   return window.requestAnimationFrame ||
   window.webkitRequestAnimationFrame ||
@@ -830,6 +833,16 @@ function reveal() {
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
+
+
+
+  var img = document.createElement("img");
+  //img.setAttribute("src", "bday-happy-birthday.gif");
+  img.setAttribute("src", "colabsolut.jpeg");/*
+  img.style.width = `750px`;
+  img.style.height = `450px`;*/
+  document.querySelector('#foto').appendChild(img);
+
 }
     
 </script>
