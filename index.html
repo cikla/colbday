@@ -826,18 +826,19 @@ function reveal() {
   {
     w = 255;h = 155;
   }
-
+  
   var ifrm = document.createElement("iframe");
   ifrm.setAttribute("src", "https://www.youtube.com/embed/7_b668-aMdI?controls=0&loop=1&autoplay=1");
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
-  ifrm.allow = 'fullscreen';
-  ifrm.allowfullscreen = 'allowfullscreen';
-  ifrm.mozallowfullscreen = 'mozallowfullscreen';
-  ifrm.msallowfullscreen = 'msallowfullscreen';
-  ifrm.oallowfullscreen = 'oallowfullscreen';
-  ifrm.webkitallowfullscreen = 'webkitallowfullscreen';
+  ifrm.setAttribute('allowFullScreen', '');
+  ifrm.setAttribute('allowfullscreen', 'allowfullscreen');
+  ifrm.setAttribute('mozallowfullscreen', 'mozallowfullscreen');
+  ifrm.setAttribute('msallowfullscreen', 'msallowfullscreen');
+  ifrm.setAttribute('oallowfullscreen', 'oallowfullscreen');
+  ifrm.setAttribute('webkitallowfullscreen', 'webkitallowfullscreen');
+  ifrm.setAttribute('allowFullScreen', '');
   document.querySelector('#video').appendChild(ifrm);
 
 
